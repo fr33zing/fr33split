@@ -1,0 +1,51 @@
+.item {
+  @include button($base);
+
+  display: grid;
+  grid-template-areas:
+    "status name value"
+    "status quantity value";
+
+  grid-template-columns: auto 1fr auto;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1;
+}
+
+.status {
+  grid-area: status;
+  font-size: 2em;
+  background: color-mix(in srgb, $red 20%, transparent);
+  color: $red;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.text {
+  grid-area: name;
+}
+
+.quantity {
+  grid-area: quantity;
+  align-self: end;
+  height: 1em;
+
+  .unassigned {
+    color: color-mix(in srgb, $text 80%, transparent);
+    background: color-mix(in srgb, $text 20%, transparent);
+    border-radius: 50%;
+  }
+
+  .quantityNumber {
+    vertical-align: top;
+  }
+}
+
+.value {
+  grid-area: value;
+  align-self: center;
+  font-size: 1.25em;
+  font-weight: bold;
+}

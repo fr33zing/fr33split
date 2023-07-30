@@ -1,0 +1,26 @@
+@mixin button($bg) {
+  cursor: pointer;
+  background: $bg;
+  transition: background 250ms ease;
+
+  &:active {
+    background: color-mix(in srgb, $bg, $pure-fg 15%);
+    transition: unset;
+  }
+}
+
+@mixin flat($size) {
+  $half: $size / 2;
+  box-shadow:
+    (-$half) $half $size color-mix(in srgb, $base, $crust),
+    $half (-$half) $size $mantle;
+}
+
+@mixin convex($size) {
+  $half: $size / 3;
+  box-shadow:
+    (-$half) (-$half) $size color-mix(in srgb, $base, $crust),
+    $half $half $size $mantle,
+    inset (-$half) (-$half) $size $mantle,
+    inset $half $half $size color-mix(in srgb, $base, $crust);
+}

@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.25rem;
+  padding: $app-controls-padding;
+  box-sizing: border-box;
+}

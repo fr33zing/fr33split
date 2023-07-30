@@ -1,0 +1,19 @@
+.slide-fade-enter-active,
+.slide-fade-exit-active {
+  transition: opacity 200ms ease;
+}
+
+.slide-fade-enter,
+.slide-fade-exit-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-exit-active,
+.slide-fade-enter,
+.slide-fade-exit-to {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

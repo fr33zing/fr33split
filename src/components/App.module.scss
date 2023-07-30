@@ -1,0 +1,43 @@
+.app {
+  overflow: hidden;
+  width: 100vw;
+  height: 100dvh;
+  background: $base;
+}
+
+.receipt {
+  width: 100%;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $crust;
+  box-shadow: 0 0 1rem $shadow;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  transition:
+    top 400ms ease,
+    border-radius 300ms ease-in;
+
+  &.receiptVisible {
+    top: 15dvh;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    transition:
+      top 400ms ease,
+      border-radius 200ms ease-out;
+  }
+}
+
+.outlet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
